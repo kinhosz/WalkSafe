@@ -1,0 +1,177 @@
+/* app/styles/app.css */
+:root {
+  --background: #f4f7f6;
+  --dark-bg: #2d3748;
+  --dark-bg-hover: #4a5568;
+  --text-light: #e2e8f0;
+  --text-dark: #1a202c;
+  --border-color: #e2e8f0;
+  --accent-color: #48bb78;
+  --accent-color-hover: #38a169;
+  --danger-color: #e53e3e;
+  --info-bg: #ebf8ff;
+  --info-border: #90cdf4;
+  --info-text: #2c5282;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+  background-color: var(--background);
+  color: var(--text-dark);
+}
+
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* Header */
+.main-header {
+  background-color: var(--dark-bg);
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.main-header nav a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.main-header nav a:hover {
+  background-color: var(--dark-bg-hover);
+}
+
+.main-header nav a.active {
+  background-color: var(--dark-bg-hover);
+  font-weight: 700;
+}
+
+/* Formulários */
+.form-container {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.form-group textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Botões */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.btn-primary {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-color-hover);
+}
+
+.btn-logout {
+  background: var(--danger-color);
+  color: white;
+  padding: 0.5rem 1rem;
+}
+
+
+/* Ocorrências */
+.occurrence-card {
+  background-color: white;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.occurrence-card h3 {
+  margin-top: 0;
+}
+
+.occurrence-info-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--info-bg);
+  border: 1px solid var(--info-border);
+  color: var(--info-text);
+  font-size: 0.875rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+}
+
+
+/* Comentários */
+.comments-section {
+  margin-top: 2rem;
+}
+
+.comment {
+  border-top: 1px solid var(--border-color);
+  padding: 1rem 0;
+}
+
+.comment strong {
+  margin-right: 0.5rem;
+}
+
+/* Caixa de Informação */
+.info-box {
+  background-color: #e6f4ea;
+  border-left: 4px solid var(--accent-color);
+  padding: 1rem 1.5rem;
+  margin-top: 2rem;
+  border-radius: 4px;
+}
+.info-box p {
+  margin: 0.5rem 0;
+}
+.info-box ul {
+  padding-left: 20px;
+  margin: 0.5rem 0;
+}
